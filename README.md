@@ -20,3 +20,7 @@ Yangi mahalliy bazada birinchi ishga tushishda admin email va tasodifiy kuchli p
 ## Deploy
 
 `npm install && npm run build` bajarib, ilovani `npm start` bilan ishga tushiring. Node.js jarayoni `dist` ichidagi front-end fayllarni va API’ni bir portda taqdim etadi. Birinchi production ishga tushirishda `NODE_ENV=production`, `ADMIN_EMAIL` va `ADMIN_PASSWORD` ni sozlang. Tashqi reverse proxy’da HTTPS yoqing va `data/` katalogini zaxiralang. Rasmlar tashqi URL yoki mahsulot formasiga yuklangan rasm fayli sifatida saqlanishi mumkin.
+
+### Render’da bepul preview
+
+`render.yaml` Render’da `sotuv-mall` web service’ni bepul reja bilan yaratadi va admin parolini Render’da tasodifiy yaratadi. Bepul service 15 daqiqa so‘rov kelmasa uxlaydi; `data/` ichidagi akkauntlar, buyurtmalar va yuklangan rasmlar qayta ishga tushganda yo‘qolishi mumkin. Buni production ma’lumotlari uchun ishlatmang. Doimiy ma’lumot saqlash uchun persistent database va pullik service kerak bo‘ladi.

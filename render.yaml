@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: sotuv-mall
+    runtime: node
+    plan: free
+    buildCommand: npm ci && npm run build
+    startCommand: npm start
+    healthCheckPath: /api/products
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: ADMIN_EMAIL
+        value: admin@sotuv.uz
+      - key: ADMIN_PASSWORD
+        generateValue: true
